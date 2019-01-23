@@ -1,0 +1,25 @@
+-- 存储过程 函数要执行的业务sql语句
+CREATE PROCEDURE checkFormid()
+BEGIN
+	DELETE FROM twxformid WHERE createTime<DATE_SUB(SYSDATE(),INTERVAL 4 DAY);
+END;
+
+-- 事件
+-- 代码说明：
+-- 上面为整体代码，敲完再写分号
+-- 第一行create event day_event是创建名为second_event的事件,注意此处没有括号
+-- 第二行是创建周期定时的规则，本处的意思是每秒钟执行一次
+-- 第三行on completion preserve disable是表示创建后并不开始生效。
+-- 第四行do call test_proce()是该event(事件)的操作内容，表示调用我们刚刚创建的test_proce()存储过程。
+-- on schedule every 1 second //每秒执行1次
+-- on schedule every 2 minute //每两分钟执行1次
+-- on schedule every 3 day //每3天执行1次
+create event second_event
+on schedule every 50 second
+on completion preserve disable
+do call checkFormid();
+
+-- 开启定时任务
+alter event second_event on completion preserve enable;
+-- 关闭定时任务
+alter event second_event on completion preserve disable;
