@@ -1,0 +1,11 @@
+    点击Open'settings.xml' , 刚开始这个位置是Create 'settings.xml' ,打开之后添加在里面添加了镜像服务器:
+    
+    <mirrors>
+        <mirror>
+            <id>nexus</id>
+            <name>internal nexus repository</name>
+            <!-- <url>http://192.168.1.100:8081/nexus/content/groups/public/</url>-->
+            <url>http://repo.maven.apache.org/maven2</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+    </mirrors>
