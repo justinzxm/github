@@ -1,0 +1,6 @@
+普通索引：
+ALTER TABLE table_name ADD INDEX index_name (column_list)
+唯一索引：
+ALTER TABLE table_name ADD UNIQUE (column_list)
+主键索引：
+ALTER TABLE table_name ADD PRIMARY KEY (column_list)
