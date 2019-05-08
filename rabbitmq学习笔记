@@ -1,0 +1,35 @@
+1.学习链接：https://www.cnblogs.com/ityouknow/p/6120544.html
+2.代码示例：
+  生产者：
+        @Autowired
+        private AmqpTemplate amqpTemplate;
+        
+        @Value("${spring.rabbitmq.email.exchange}")
+        private String exchange;
+
+        @Value("${spring.rabbitmq.email.routinkey.addUser}")
+        private String addUserRoutinkey;
+        
+        //发送mq通知服务新增用户,创建发送内容
+        HashMap<String, String> map = new HashMap<>(10);
+        map.put("subject", "新用户提醒");
+        map.put("userName",request.getUserName());
+        map.put("password",request.getPassword());
+        map.put("email", request.getEmail());
+        //exchange交换机一个系统只能有一个  addUserRoutinkey路由键 通过路由键和交换机的绑定找到对应的队列  map发送的内容
+        amqpTemplate.convertAndSend(exchange,addUserRoutinkey, map);
+        
+        
+        
+        
+   消费者:
+    /**
+     *  新增用户后，发邮件提示其用户名和密码
+     *  1.bindings绑定的集合 2.@QueueBinding排队绑定 3.@Queue队列可以自定义 durable消息队列持久化 4.@Exchange交换机的值，一个系统或虚拟机只能有一个
+     *  5.type交换机类型 6.ignoreDeclarationExceptions忽略异常 7.key 路由键找到对应的队列，可以存在多个
+     */
+    @RabbitListener(bindings = @QueueBinding(value = @Queue(value = "paas.admin.email.user", durable = "true"),
+            exchange = @Exchange(value ="paas.admin.email.exchange", type = ExchangeTypes.TOPIC,
+                    ignoreDeclarationExceptions = "true"), key = "paas.admin.email.addUser"))
+    public void sendEmailByAddUser(Map<String, String> map) {
+    }
