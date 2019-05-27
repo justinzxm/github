@@ -4,3 +4,6 @@ ALTER TABLE table_name ADD INDEX index_name (column_list)
 ALTER TABLE table_name ADD UNIQUE (column_list)
 主键索引：
 ALTER TABLE table_name ADD PRIMARY KEY (column_list)
+
+
+https://www.cnblogs.com/shihaiming/p/6496804.html   mysql索引总结----mysql 索引类型以及创建
