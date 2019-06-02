@@ -68,3 +68,5 @@ https://www.cnblogs.com/fingerboy/p/6657118.html  优雅高效的MyBatis-Plus工
 https://www.cnblogs.com/winner-0715/p/6109225.html  Java下利用Jackson进行JSON解析和序列化
 http://www.pianshen.com/article/1953200080/  jackson学习-@JsonValue的用法
 https://blog.csdn.net/liuguangsh/article/details/72518244  mySql的连接useSSL=false
+https://blog.csdn.net/weixin_37577564/article/details/80329775     JDBC中The server time zone value '???ú±ê×??±??' is ............. 的错误
+https://www.cnblogs.com/EasonJim/p/6906713.html     使用JDBC连接MySql时出现：The server time zone value '�й���׼ʱ��' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration
