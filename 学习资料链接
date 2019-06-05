@@ -71,3 +71,4 @@ https://blog.csdn.net/liuguangsh/article/details/72518244  mySql的连接useSSL=
 https://blog.csdn.net/weixin_37577564/article/details/80329775     JDBC中The server time zone value '???ú±ê×??±??' is ............. 的错误
 https://www.cnblogs.com/EasonJim/p/6906713.html     使用JDBC连接MySql时出现：The server time zone value '�й���׼ʱ��' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration
 https://www.cnblogs.com/zhangyinhua/p/9277684.html  SpringBoot整合Mail
+https://blog.csdn.net/qq_39241443/article/details/81293939  使用Spring Boot发送邮件
