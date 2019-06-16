@@ -91,3 +91,5 @@ https://www.cnblogs.com/wangf-keep/p/6480019.html   json字符串与java对象�
 https://blog.csdn.net/niuchenliang524/article/details/82869319   【Es】jest操作elasticsearch
 https://es.xiaoleilu.com/010_Intro/30_Tutorial_Search.html  Elasticsearch权威指南中文版（API）
 https://www.elastic.co/guide/cn/elasticsearch/guide/current/query-time-boosting.html  查询时权重提升
+https://www.elastic.co/guide/cn/elasticsearch/guide/current/using-synonyms.html  使用同义词编辑
+https://www.jianshu.com/p/809f4262f427  ElasticSearch6 IK 同义词 配置
