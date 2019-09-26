@@ -135,3 +135,7 @@ https://www.cnblogs.com/nlbnick/p/6940758.html  JS获取select下拉框选中的
 https://my.oschina.net/u/3421984/blog/1604188   Js和Thymeleaf如何获取model中的值
 https://blog.csdn.net/fanpeizhong/article/details/80173452  thymeleaf的内联th:inline（在javascript访问model中的数据）
 https://www.jianshu.com/p/7330a3b0c33d   轻量级JS Cookie插件js-cookie的使用方法
+https://www.jb51.net/article/163289.htm  利用js-cookie实现前端设置缓存数据定时失效
+https://www.cnblogs.com/jun-ma/p/5679459.html  Spring cookie 实战 测试环境搭建使用Springboot构建web server, 在测试方法中打印接收的cookie
+https://blog.csdn.net/x18621144576/article/details/79732964   HttpServletRequest用户请求与cookie详解
+https://bbs.csdn.net/topics/360208639   一句request.getCookies()，到底是怎么知道获取的是哪些Cookie?
